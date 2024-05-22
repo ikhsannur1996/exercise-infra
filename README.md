@@ -37,7 +37,170 @@ Our company, XYZ Music, aims to launch a new music streaming platform targeting 
 - **Database**: Cloud SQL (MySQL/PostgreSQL)
 - **Storage**: Cloud Storage
 
-### Architecture Diagram
+### On-Premises Technology Architecture for a Music Streaming Platform
+
+#### Simplified Architecture
+
+**Frontend:**
+- **Hosting**: Apache HTTP Server
+- **Authentication**: Custom Authentication Service
+
+**Backend:**
+- **API**: RESTful API hosted on Apache Tomcat
+- **Database**: MySQL Database
+- **Storage**: Network Attached Storage (NAS)
+
+### On-Premises Architecture Diagram
+
+```plaintext
+Frontend:
++-----------------------------------+
+|                                   |
+|    Static Files (Apache HTTP)     |
+|        - HTML, CSS, JS            |
+|                                   |
++-----------------------------------+
+               |
+               v
++-----------------------------------+
+|                                   |
+|  User Authentication (Custom)     |
+|                                   |
++-----------------------------------+
+
+Backend:
++-----------------------------------+
+|                                   |
+|  RESTful API (Apache Tomcat)      |
+|                                   |
++-----------------------------------+
+               |
+               v
++-----------------------------------+
+|                                   |
+|  Database (MySQL)                 |
+|      - User Data                  |
+|      - Music Metadata             |
+|                                   |
++-----------------------------------+
+               |
+               v
++-----------------------------------+
+|                                   |
+|  Music Files (NAS)                |
+|                                   |
++-----------------------------------+
+```
+
+### Detailed Components
+
+#### Frontend
+
+1. **Apache HTTP Server**:
+   - Serve static files (HTML, CSS, JavaScript) that constitute the frontend of the application.
+   - Configure the server to handle requests efficiently and securely.
+
+2. **Custom Authentication Service**:
+   - Implement a custom authentication mechanism to handle user sign-ins and sign-ups.
+   - Utilize secure protocols and encryption to protect user credentials and data.
+
+#### Backend
+
+1. **Apache Tomcat**:
+   - Develop a RESTful API using a framework like Spring (Java) or other compatible frameworks.
+   - Deploy the API on an Apache Tomcat server for handling backend logic and business processes.
+
+2. **MySQL Database**:
+   - Install and configure a MySQL database to store user data and music metadata.
+   - Ensure database optimization, backup, and recovery procedures are in place.
+
+3. **Network Attached Storage (NAS)**:
+   - Use NAS devices to store and serve music files.
+   - Configure NAS for high availability and efficient access.
+
+#### Detail Technical Specifications
+#### Frontend
+
+#### Static Files (Apache HTTP)
+- **Server:** Apache HTTP Server
+- **Specifications:**
+  - **CPU:** Quad-core Intel Xeon or AMD equivalent
+  - **RAM:** 8 GB
+  - **Storage:** SSD, 250 GB
+  - **Network:** 1 Gbps Ethernet
+  - **Operating System:** Ubuntu 20.04 LTS or CentOS 8
+  - **Other Software:**
+    - **Apache HTTP Server Version:** 2.4.46+
+    - **SSL/TLS:** Enabled with Let's Encrypt
+  - **Content:**
+    - HTML5
+    - CSS3
+    - JavaScript (Vanilla or frameworks like React, Angular, or Vue.js)
+
+### User Authentication (Custom)
+- **Server:** Custom application server
+- **Specifications:**
+  - **CPU:** Quad-core Intel Xeon or AMD equivalent
+  - **RAM:** 8 GB
+  - **Storage:** SSD, 250 GB
+  - **Network:** 1 Gbps Ethernet
+  - **Operating System:** Ubuntu 20.04 LTS or CentOS 8
+  - **Other Software:**
+    - **Authentication Method:** Custom logic using JWT (JSON Web Tokens)
+    - **Encryption:** AES-256 for data at rest and TLS 1.2/1.3 for data in transit
+    - **Programming Language:** Python 3.8+, Node.js, or Java (Spring Boot)
+
+#### Backend
+
+#### RESTful API (Apache Tomcat)
+- **Server:** Apache Tomcat
+- **Specifications:**
+  - **CPU:** Octa-core Intel Xeon or AMD equivalent
+  - **RAM:** 16 GB
+  - **Storage:** SSD, 500 GB
+  - **Network:** 1 Gbps Ethernet
+  - **Operating System:** Ubuntu 20.04 LTS or CentOS 8
+  - **Other Software:**
+    - **Tomcat Version:** 9.0.41+
+    - **JDK:** OpenJDK 11+
+    - **Framework:** Spring Boot or Jersey for RESTful services
+    - **API Documentation:** Swagger/OpenAPI
+
+#### Database (MySQL)
+- **Server:** MySQL Database Server
+- **Specifications:**
+  - **CPU:** Octa-core Intel Xeon or AMD equivalent
+  - **RAM:** 32 GB
+  - **Storage:** SSD, 1 TB with RAID 1 configuration for redundancy
+  - **Network:** 1 Gbps Ethernet
+  - **Operating System:** Ubuntu 20.04 LTS or CentOS 8
+  - **Other Software:**
+    - **MySQL Version:** 8.0+
+    - **Backup:** Regular automated backups using mysqldump or Percona XtraBackup
+    - **Optimization:** Indexing, query optimization, and use of InnoDB storage engine
+  - **Data:**
+    - User Data: Authentication credentials, user profiles
+    - Music Metadata: Artist, album, track information, playlists
+
+#### Music Files (NAS)
+- **Storage:** Network Attached Storage (NAS)
+- **Specifications:**
+  - **CPU:** Quad-core ARM or Intel Celeron
+  - **RAM:** 4 GB
+  - **Storage:** 20 TB in RAID 5/6 configuration for redundancy and performance
+  - **Network:** 1 Gbps Ethernet with Link Aggregation (LACP) for higher throughput
+  - **Operating System:** Vendor-specific NAS OS (e.g., Synology DSM, QNAP QTS)
+  - **Other Software:**
+    - **File System:** EXT4 or Btrfs
+    - **Access Protocols:** NFS, SMB/CIFS, FTP
+    - **Backup:** Regular automated backups to an offsite location or cloud storage
+
+#### Network Infrastructure
+- **Load Balancer:** HAProxy or Nginx for load balancing across multiple servers
+- **Firewall:** Hardware firewall (e.g., Cisco ASA) or software firewall (e.g., iptables, UFW)
+- **Security:** VPN for secure remote access, IDS/IPS for intrusion detection and prevention
+
+### Cloud Architecture Diagram
 
 ```plaintext
 Frontend:
