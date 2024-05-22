@@ -118,7 +118,7 @@ Backend:
    - Use NAS devices to store and serve music files.
    - Configure NAS for high availability and efficient access.
 
-#### Detail Technical Specifications
+### Detail Technical Specifications
 #### Frontend
 
 #### Static Files (Apache HTTP)
@@ -137,7 +137,7 @@ Backend:
     - CSS3
     - JavaScript (Vanilla or frameworks like React, Angular, or Vue.js)
 
-### User Authentication (Custom)
+#### User Authentication (Custom)
 - **Server:** Custom application server
 - **Specifications:**
   - **CPU:** Quad-core Intel Xeon or AMD equivalent
