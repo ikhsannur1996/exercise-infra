@@ -26,7 +26,7 @@ Our company, XYZ Music, aims to launch a new music streaming platform targeting 
 
 ### Answer
 
-#### Simplified Architecture
+#### Architecture
 
 **Frontend:**
 - **Hosting**: Google Cloud Storage
@@ -39,7 +39,7 @@ Our company, XYZ Music, aims to launch a new music streaming platform targeting 
 
 ### On-Premises Technology Architecture for a Music Streaming Platform
 
-#### Simplified Architecture
+#### Architecture
 
 **Frontend:**
 - **Hosting**: Apache HTTP Server
@@ -270,4 +270,4 @@ Backend:
 
 ### Conclusion
 
-This simplified architecture meets the requirements of our music streaming platform while offering several benefits. By leveraging Google Cloud Platform services, we can build a scalable, secure, and developer-friendly solution that provides users with a seamless music streaming experience. With cost-effective scalability, rapid development, high availability, integrated security, data analytics capabilities, and a supportive developer environment, we are well-positioned to launch and grow our music streaming platform successfully.
+This architecture meets the requirements of our music streaming platform while offering several benefits. By leveraging Google Cloud Platform services, we can build a scalable, secure, and developer-friendly solution that provides users with a seamless music streaming experience. With cost-effective scalability, rapid development, high availability, integrated security, data analytics capabilities, and a supportive developer environment, we are well-positioned to launch and grow our music streaming platform successfully.
