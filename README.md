@@ -26,17 +26,6 @@ Our company, XYZ Music, aims to launch a new music streaming platform targeting 
 
 ### Answer
 
-#### Architecture
-
-**Frontend:**
-- **Hosting**: Google Cloud Storage
-- **Authentication**: Firebase Authentication
-
-**Backend:**
-- **API**: Cloud Run
-- **Database**: Cloud SQL (MySQL/PostgreSQL)
-- **Storage**: Cloud Storage
-
 ### On-Premises Technology Architecture for a Music Streaming Platform
 
 #### Architecture
@@ -201,6 +190,16 @@ Backend:
 - **Security:** VPN for secure remote access, IDS/IPS for intrusion detection and prevention
 
 ### Cloud Architecture Diagram
+#### Architecture
+
+**Frontend:**
+- **Hosting**: Google Cloud Storage
+- **Authentication**: Firebase Authentication
+
+**Backend:**
+- **API**: Cloud Run
+- **Database**: Cloud SQL (MySQL/PostgreSQL)
+- **Storage**: Cloud Storage
 
 ```plaintext
 Frontend:
